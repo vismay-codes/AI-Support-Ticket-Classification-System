@@ -1,0 +1,15 @@
+# Python
+python-ml-service/.venv/
+python-ml-service/__pycache__/
+python-ml-service/model/*.joblib
+python-ml-service/model/*.json
+
+# Java
+spring-api/target/
+spring-api/data/
+.idea/
+*.iml
+
+# Local tools
+.tools/
+.tools/

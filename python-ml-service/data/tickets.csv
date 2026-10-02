@@ -1,0 +1,94 @@
+ticket_text,category
+I cannot login to my account,Login Issue
+My password reset link is not working,Login Issue
+I forgot my password and cannot sign in,Login Issue
+The login page rejects my correct password,Login Issue
+I am unable to access my account,Login Issue
+My account sign in keeps failing,Login Issue
+The verification code is not allowing me to login,Login Issue
+I cannot sign into the application,Login Issue
+Login is failing after I entered the verification code,Login Issue
+I cannot access my dashboard after signing in,Login Issue
+The sign in button does not work,Login Issue
+My username and password are not accepted,Login Issue
+I am locked out of my account,Login Issue
+The login session keeps expiring,Login Issue
+I cannot authenticate into the application,Login Issue
+My one time password is not working for login,Login Issue
+I need help with account sign in,Login Issue
+The password change did not fix my login problem,Login Issue
+I cannot log into the customer portal,Login Issue
+My account login is blocked,Login Issue
+I am getting an invalid credentials message,Login Issue
+The sign in page keeps returning an error,Login Issue
+I cannot complete the login process,Login Issue
+My authentication code is rejected,Login Issue
+The application will not let me sign in,Login Issue
+My login credentials are not working,Login Issue
+The payment was charged twice,Payment Issue
+My payment was deducted but the order failed,Payment Issue
+My card payment was declined,Payment Issue
+I was charged but did not receive an order confirmation,Payment Issue
+The transaction failed after money was deducted,Payment Issue
+I have an issue with my online payment,Payment Issue
+The payment status is still pending,Payment Issue
+My refund for the failed payment has not arrived,Payment Issue
+I was charged an incorrect amount,Payment Issue
+The card was charged but the transaction is incomplete,Payment Issue
+My wallet payment failed,Payment Issue
+The payment gateway returned an error,Payment Issue
+I paid successfully but the order still shows unpaid,Payment Issue
+My refund is missing after a cancelled order,Payment Issue
+The transaction was declined by the bank,Payment Issue
+I received two charges for one purchase,Payment Issue
+My payment is stuck in pending status,Payment Issue
+The checkout payment did not complete,Payment Issue
+Money was deducted from my account but the service was not activated,Payment Issue
+I cannot complete the payment,Payment Issue
+The application crashes when I open it,Technical Issue
+The website shows an error message,Technical Issue
+The mobile application is not responding,Technical Issue
+The page keeps loading and does not open,Technical Issue
+I found a technical error on the dashboard,Technical Issue
+The application stopped working after an update,Technical Issue
+The website is very slow when I open reports,Technical Issue
+The server error appears when I submit the form,Technical Issue
+The application freezes while loading,Technical Issue
+The dashboard is displaying a system error,Technical Issue
+The mobile app closes unexpectedly,Technical Issue
+The website is unavailable,Technical Issue
+The report page is not loading,Technical Issue
+The application returns a server error,Technical Issue
+The system is responding very slowly,Technical Issue
+A technical problem occurs when I upload a file,Technical Issue
+The page is blank after I submit the form,Technical Issue
+The application fails when I open the dashboard,Technical Issue
+The service is temporarily unavailable,Technical Issue
+The website crashes when I open reports,Technical Issue
+The API request is returning an error,Technical Issue
+The system stopped responding after the latest update,Technical Issue
+The page keeps timing out,Technical Issue
+I want to update my profile details,Account Issue
+How can I change my phone number,Account Issue
+I need to update my email address,Account Issue
+I want to change my account information,Account Issue
+My profile details are incorrect,Account Issue
+I need help updating my personal information,Account Issue
+How do I change the name on my account,Account Issue
+I want to update my account settings,Account Issue
+I need to change my address,Account Issue
+My phone number on the account is wrong,Account Issue
+I want to edit my profile information,Account Issue
+How do I update my contact details,Account Issue
+I need to change my registered email,Account Issue
+My account information needs an update,Account Issue
+I want to edit my personal details,Account Issue
+How can I update my profile,Account Issue
+I need to correct my account details,Account Issue
+I want to change my registered phone number,Account Issue
+How do I modify my account settings,Account Issue
+My profile information is outdated,Account Issue
+I need to update the name on my profile,Account Issue
+How can I change my contact information,Account Issue
+I want to update my account profile,Account Issue
+I need to edit my personal information,Account Issue

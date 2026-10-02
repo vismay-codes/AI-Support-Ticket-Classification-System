@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Support Ticket Classifier</title>
+    <style>
+        *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#1f2937}.wrap{max-width:900px;margin:40px auto;padding:20px}.card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:28px;box-shadow:0 8px 24px rgba(0,0,0,.06)}h1{margin:0 0 8px;font-size:28px}p.sub{margin:0 0 24px;color:#6b7280}textarea{width:100%;min-height:130px;padding:14px;border:1px solid #d1d5db;border-radius:10px;font-size:15px;resize:vertical}button{margin-top:14px;padding:11px 18px;border:0;border-radius:9px;background:#111827;color:white;font-size:15px;cursor:pointer}button:disabled{opacity:.6}.result{margin-top:22px;padding:18px;border-radius:10px;background:#f8fafc;border:1px solid #e2e8f0}.category{font-size:22px;font-weight:700}.muted{color:#64748b;font-size:13px;margin-top:7px}.examples{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.example{border:1px solid #d1d5db;background:white;border-radius:999px;padding:7px 10px;font-size:12px;cursor:pointer}.error{color:#b91c1c}.footer{margin-top:16px;font-size:12px;color:#64748b}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="card">
+        <h1>AI Support Ticket Classification System</h1>
+        <p class="sub">Spring Boot + Python NLP + TF-IDF + Logistic Regression + SQL</p>
+        <textarea id="ticket" placeholder="Enter a customer support ticket..."></textarea>
+        <div class="examples">
+            <button class="example" onclick="useExample('My payment was deducted but my order was not confirmed')">Payment example</button>
+            <button class="example" onclick="useExample('I cannot login to my account')">Login example</button>
+            <button class="example" onclick="useExample('The application crashes when I open it')">Technical example</button>
+            <button class="example" onclick="useExample('I need to update my phone number')">Account example</button>
+        </div>
+        <button id="classify" onclick="classifyTicket()">Classify Ticket</button>
+        <div id="result" class="result" style="display:none"></div>
+        <div class="footer">Predictions are stored locally in the application database.</div>
+    </div>
+</div>
+<script>
+function useExample(text){document.getElementById('ticket').value=text}
+async function classifyTicket(){
+ const input=document.getElementById('ticket'), button=document.getElementById('classify'), result=document.getElementById('result');
+ const ticket=input.value.trim();
+ if(!ticket){result.style.display='block';result.innerHTML='<div class="error">Please enter a ticket.</div>';return}
+ button.disabled=true;button.textContent='Classifying...';result.style.display='block';result.innerHTML='Processing...';
+ try{
+  const response=await fetch('/api/tickets/classify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({ticket})});
+  const data=await response.json();
+  if(!response.ok) throw new Error(data.message||data.error||'Request failed');
+  const confidence=(Number(data.confidence)*100).toFixed(2);
+  result.innerHTML=`<div class="muted">Predicted Category</div><div class="category">${escapeHtml(data.category)}</div><div class="muted">Model confidence: ${confidence}%</div>`;
+ }catch(e){result.innerHTML=`<div class="error">${escapeHtml(e.message)}</div>`}
+ finally{button.disabled=false;button.textContent='Classify Ticket'}
+}
+function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+</script>
+</body>
+</html>

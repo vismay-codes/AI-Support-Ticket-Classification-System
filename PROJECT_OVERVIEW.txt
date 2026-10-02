@@ -1,0 +1,19 @@
+PROJECT: AI-Based Support Ticket Classification System
+
+RESUME TECH STACK:
+Python, NLP, Scikit-learn, Java, Spring Boot, REST API, SQL, Oracle Database
+
+CORE FLOW:
+Browser -> Spring Boot -> Python ML API -> TF-IDF -> Logistic Regression -> SQL Database
+
+DEFAULT RUN MODE:
+H2 local file database. This makes the project zero-configuration for the demo.
+
+ORACLE MODE:
+Oracle JDBC driver + oracle/schema.sql + Spring profile 'oracle'.
+
+CATEGORIES:
+Login Issue | Payment Issue | Technical Issue | Account Issue
+
+IMPORTANT:
+The dataset is a student-project dataset. The application reports its measured validation accuracy at /model-info, but no accuracy figure should be claimed on a resume unless verified by the user.
